@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarComparar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FB9F2C"
+        android:elevation="4dp"
+        android:title="El Sol"
+        android:titleTextColor="@android:color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/textoComparaPlanetas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:layout_margin="10dp"
+            android:text="Compara planetas"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompletePlaneta1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#8249BA"
+            android:hint=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/autoCompletePlaneta2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoComparaPlanetas" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompletePlaneta2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="#8249BA"
+            android:hint=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/autoCompletePlaneta1"
+            app:layout_constraintTop_toBottomOf="@id/textoComparaPlanetas" />
+
+        <TextView
+            android:id="@+id/textoDiametro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Diametro"
+            android:textColor="#8249BA"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/autoCompletePlaneta1" />
+
+        <TextView
+            android:id="@+id/diametroPlaneta1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D7B3E7"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/diametroPlaneta2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoDiametro" />
+
+        <TextView
+            android:id="@+id/diametroPlaneta2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D7B3E7"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/diametroPlaneta1"
+            app:layout_constraintTop_toBottomOf="@id/textoDiametro" />
+
+        <TextView
+            android:id="@+id/textoDistancia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#8249BA"
+            android:text="Distancia al Sol"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/diametroPlaneta1" />
+
+        <TextView
+            android:id="@+id/distanciaPlaneta1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D7B3E7"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/distanciaPlaneta2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoDistancia" />
+
+        <TextView
+            android:id="@+id/distanciaPlaneta2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D7B3E7"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/distanciaPlaneta1"
+            app:layout_constraintTop_toBottomOf="@id/textoDistancia" />
+
+        <TextView
+            android:id="@+id/textoDensidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#8249BA"
+            android:text="Densidad"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/distanciaPlaneta1" />
+
+        <TextView
+            android:id="@+id/densidadPlaneta1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D7B3E7"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/densidadPlaneta2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoDensidad" />
+
+        <TextView
+            android:id="@+id/densidadPlaneta2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#D7B3E7"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/densidadPlaneta1"
+            app:layout_constraintTop_toBottomOf="@id/textoDensidad" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
